@@ -2,14 +2,14 @@
 // criando o objeto
 
 const pessoa = {
-    "nome" : "Letícia",
-    "sobrenome" : "Pardini",
-    "idade" : 26,
-    "genero": "feminino",
-    "altura": 1.62,
-    "peso" : 61,
-    "signo" : "áries",
-    "cor" : "branca"
+    nome : "Letícia",
+    sobrenome : "Pardini",
+    idade : 26,
+    genero : "feminino",
+    altura: 1.62,
+    peso : 61,
+    signo : "áries",
+    cor : "branca"
 } ;
 
 console.log(pessoa);

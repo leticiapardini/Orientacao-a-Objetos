@@ -1,4 +1,4 @@
-console.log("===OBJETO LITERAL===");
+console.log("===OBJETO LITERAL (dinâmico)===");
 
 //Conceito 
 // O que é? é um elemento que pode ser divido em 2 partes: DE UM LADO - caracteristicas (elas definem como um objeto é). DO OUTRO LADO - ações (define o que o objeto é capaz de fazer ou executar)
