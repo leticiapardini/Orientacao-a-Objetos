@@ -3,7 +3,7 @@
 const CALCULADORA = (function () {
 
     const ObjCalculadora = {
-        resultado: 0,
+
         historico: new Array(),
 
         soma: function (...num) {
@@ -16,6 +16,8 @@ const CALCULADORA = (function () {
         },
 
         subtrair: function (...valor) {
+
+
             res = valor[0]
 
             for (let i = 1; i < valor.length; i++) {
@@ -23,35 +25,35 @@ const CALCULADORA = (function () {
                 ObjCalculadora.historico.push(` O resultado da ultima subtração foi de ${res}`);
             }
             return res;
-                
+
         },
 
         multiplicacao: function (...valor) {
-            
-            let res = valor[0];
-            for (let i = 1; i < valor.length; i++) {
-                res = res * valor[i] ;
-                ObjCalculadora.historico.push(`O resultado da ultima multiplicação foi de ${res}`);
-                
 
-                return res;
+            let res = valor[0]
+            for (let i = 1; i < valor.length; i++) {
+                res = res * valor[i];
+                ObjCalculadora.historico.push(`O resultado da ultima multiplicação foi de ${res}`);
+
             }
+            return res;
         },
+
         divisao: function (...valor) {
             let res = valor[0];
-            for (const i = 1; i < valor.length; i++) {
-                res = res / valor[i] ;
+            for (let i = 1; i < valor.length; i++) {
+                res = res / valor[i];
                 ObjCalculadora.historico.push(` O resultado da ultima divisao foi de ${res}`);
-                return res;
             }
+            return res;
         },
         exponenciacao: function (...valor) {
-            let res = 0;
-            for (const i = 1; i < valor.length; i++) {
-                res = valor[0] ** valor[i];
+            let res = valor[0];
+            for (let i = 1; i < valor.length; i++) {
+                res **= valor[i];
                 ObjCalculadora.historico.push(` O resultado da ultima exponênciação foi de ${res}`);
-                return res;
             }
+            return res;
         },
 
         his: function () {
@@ -76,12 +78,12 @@ const CALCULADORA = (function () {
         clear: ObjCalculadora.limpaHistorico
     }
 })();
-console.log(CALCULADORA.soma(4, 4 ,4));
-console.log(CALCULADORA.multiplicacao(4, 4 ,4));
-console.log(CALCULADORA.subtracao(50,10,10));
-console.log(CALCULADORA.divisao(50,2,2));
-console.log(CALCULADORA.exponenciacao(3,2));
+console.log(CALCULADORA.soma(4, 4, 4));
+console.log(CALCULADORA.multiplicacao(4, 4, 4));
+console.log(CALCULADORA.subtracao(50, 10, 10));
+console.log(CALCULADORA.divisao(50, 2, 2));
+console.log(CALCULADORA.exponenciacao(3, 2));
 console.log(CALCULADORA.historico());
 console.log(CALCULADORA.clear());
-
+console.log(CALCULADORA.historico());
 
