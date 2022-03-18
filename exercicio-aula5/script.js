@@ -16,34 +16,37 @@ const CALCULADORA = (function () {
         },
 
         subtrair: function (...valor) {
-            res = 0;
+            res = valor[0]
 
             for (let i = 1; i < valor.length; i++) {
-                res = valor[0] - valor[i];
-                ObjCalculadora.historico.push(` O resultado da ultima subtração foi de ${res}`);
+                res -= valor[i];
+                ObjCalculadora.historico.push(` O resultado da ultima subtração foi de ${this.res}`);
             }
             return res;
+                
         },
 
         multiplicacao: function (...valor) {
+            
+            let res = valor[0];
+            for (let i = 1; i < valor.length; i++) {
+                res = res * valor[i] ;
+                ObjCalculadora.historico.push(`O resultado da ultima multiplicação foi de ${this.res}`);
+                
 
-            res = 0;
-            for (const i = 1; i < valor.length; i++) {
-                res = valor[0] * valor[i];
-                ObjCalculadora.historico.push(`O resultado da ultima multiplicação foi de ${res}`);
                 return res;
             }
         },
         divisao: function (...valor) {
-            res = 0;
+            let res = valor[0];
             for (const i = 1; i < valor.length; i++) {
-                res = valor[0] / valor[i];
+                res /= valor[i] ;
                 ObjCalculadora.historico.push(` O resultado da ultima divisao foi de ${res}`);
                 return res;
             }
         },
         exponenciacao: function (...valor) {
-            res = 0;
+            let res = 0;
             for (const i = 1; i < valor.length; i++) {
                 res = valor[0] ** valor[i];
                 ObjCalculadora.historico.push(` O resultado da ultima exponênciação foi de ${res}`);
@@ -73,15 +76,12 @@ const CALCULADORA = (function () {
         clear: ObjCalculadora.limpaHistorico
     }
 })();
-
-console.log(CALCULADORA.multiplicacao(4, 4));
-console.log(CALCULADORA.subtracao(3, 2));
-console.log(CALCULADORA.divisao(3, 2));
+console.log(CALCULADORA.soma(4, 4 ,4));
+console.log(CALCULADORA.multiplicacao(4, 4 ,4));
+console.log(CALCULADORA.subtracao(50,10,10));
+console.log(CALCULADORA.divisao(50,2,2));
 console.log(CALCULADORA.exponenciacao(3, 2));
 console.log(CALCULADORA.historico());
 console.log(CALCULADORA.clear());
-
-
-
 
 
