@@ -65,7 +65,7 @@ const CALCULADORA = (function () {
             let clear = ObjCalculadora.historico = [];
             return (`${clear} Histórico zerado, inicie novas operações!!`)
         },
-
+    
     }
 
     return {
