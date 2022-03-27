@@ -1,0 +1,24 @@
+{
+  "name": "orientacao-a-objetos",
+  "version": "1.0.0",
+  "description": "Modulo OOP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leticiapardini/Orientacao-a-Objetos.git"
+  },
+  "keywords": [
+    "oop",
+    "js",
+    "node"
+  ],
+  "author": "Leticia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leticiapardini/Orientacao-a-Objetos/issues"
+  },
+  "homepage": "https://github.com/leticiapardini/Orientacao-a-Objetos#readme"
+}
